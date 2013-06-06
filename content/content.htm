@@ -13,6 +13,17 @@
 <p>範例</p>
 <p><img src="./images/2.png" alt="" width="593" height="218"></p>
 <p><img src="./images/3.png" alt="" width="592" height="80"></p>
+<h2>w16</h2>
+<p>1.</p>
+<p>請在您所在的電腦上設定 Simple Groupware, 並且建立一個 gcalculate 模組, 共有三個輸入欄位, 以及五個輸出欄位:</p>
+<p>輸入欄位:</p>
+<p>齒數:<br>模數:<br>壓力角:</p>
+<p>輸出欄位:</p>
+<p>基圓半徑:<br>節圓半徑:<br>齒頂圓半徑:<br>齒根圓半徑:</p>
+<p>並存入表單</p>
+<p> </p>
+<p>2.</p>
+<p>將此資料庫資料匯入上題表單</p>
 <h1>C2</h1>
 <h2>w15</h2>
 <p>1.</p>
@@ -46,6 +57,87 @@
 <p><a href="http://matplotlib.org/examples/index.html">http://matplotlib.org/examples/index.html</a></p>
 <p>tkinter </p>
 <p><a href="http://effbot.org/tkinterbook/canvas.htm">http://effbot.org/tkinterbook/canvas.htm</a></p>
+<h2>w16</h2>
+<p><strong>1.</strong></p>
+<p>請寫一個網頁上的程式, 提供兩個表單, 題目為下,</p>
+<p> </p>
+<p>(1)輸入矩形 長 寬 求矩形面積 與 周長</p>
+<p>例:</p>
+<p>長 20 寬 20</p>
+<p>輸出:</p>
+<p>此矩形 長 20 寬 20 面積 400 周長 80</p>
+<p> </p>
+<p>(2)輸入姓名 學號 班級 年齡 試判斷年齡是否超過 20歲 是否具有投票權利並存入表單中</p>
+<p>例:</p>
+<p>姓名 Lee 學號 40173100 班級 四設一甲 年齡 19</p>
+<p>輸出:</p>
+<p>基本資料為 姓名 Lee 學號 40173100 班級 四設一甲 年齡 19 不具投票權利</p>
+<p> </p>
+<p>(3)求解f(x,y) = 2X<sup>2</sup> + 3Y<sup>2</sup> + 1 輸入 X Y 求解</p>
+<p>例:</p>
+<p>X = 1 Y = 1</p>
+<p>輸出</p>
+<p>f(1,1) = 6</p>
+<p> </p>
+<p><strong>2.</strong></p>
+<p>繪製不同<span>振幅的 sin 波</span> x軸為角度 y軸為值 角度0~360</p>
+<p>從 sin(x) 到 20*sin(x)</p>
+<p>請在同一張圖上表示</p>
+<p> <img src="./images/c2_w16_2.png" alt="" width="533" height="397"></p>
+<p><a href="http://onionys.blogspot.tw/2012/01/python-matplotlib.html">範例</a></p>
+<p> </p>
+<p>Hint:同上週第三題 <a href="http://163.32.98.15/teacher/benme/python/Math.htm">math用法</a> (假如是三角函數 必須把角度轉徑度 才能正確計算) <a href="http://pydoing.blogspot.tw/2011/01/python-for.html">for迴圈</a>(會讓你很輕鬆地做完這題)</p>
+<p> </p>
+<h1> C2Answer</h1>
+<p>#CMSimple hide#</p>
+<h2>w16</h2>
+<p><strong> </strong></p>
+<h3>q1</h3>
+<p><strong>1.</strong></p>
+<p>請寫一個網頁上的程式, 提供兩個表單, 題目為下,</p>
+<p> </p>
+<p>(1)輸入矩形 長 寬 求矩形面積 與 周長</p>
+<p>例:</p>
+<p>長 20 寬 20</p>
+<p>輸出:</p>
+<p>此矩形 長 20 寬 20 面積 400 周長 80</p>
+<p> </p>
+<p>(2)輸入姓名 學號 班級 年齡 試判斷年齡是否超過 20歲 是否具有投票權利並存入表單中</p>
+<p>例:</p>
+<p>姓名 Lee 學號 40173100 班級 四設一甲 年齡 19</p>
+<p>輸出:</p>
+<p>基本資料為 姓名 Lee 學號 40173100 班級 四設一甲 年齡 19 不具投票權利</p>
+<p> </p>
+<p>(3)求解f(x,y) = 2X<sup>2</sup> + 3Y<sup>2</sup> + 1 輸入 X Y 求解</p>
+<p>例:</p>
+<p>X = 1 Y = 1</p>
+<p>輸出</p>
+<p>f(1,1) = 6</p>
+<h3>q2</h3>
+<p>繪製不同振幅的 sin 波 x軸為角度 y軸為值 角度0~360</p>
+<p>從 sin(x) 到 20*sin(x)</p>
+<p>請在同一張圖上表示</p>
+<p> </p>
+<pre class="brush: python; fontsize: 100; first-line: 1; ">import matplotlib.pyplot as plt
+import numpy as np
+# 準備數據 ... 假設我要畫一個sin波 從0~180度
+for i in range(1,20+1):
+    x = np.arange(0,360)
+    y = i*np.sin(x * np.pi / 180.0)    
+    plt.plot(x,y) 
+# 設定圖的範圍, 不設的話，系統會自行決定
+#plt.xlim(-30,390)
+plt.ylim(-25,25)
+# 照需要寫入x 軸和y軸的 label 以及title
+plt.xlabel("degree") 
+plt.ylabel("value") 
+plt.title("math sin amplitude test") 
+#設定網格 顯示為True
+plt.grid(True)
+# 在這個指令之前，都還在做畫圖的動作 
+# 這個指令算是 "秀圖" 
+plt.show() </pre>
+<p> </p>
 <h1>歡迎蒞臨 CMSimple_XH 台灣繁體版</h1>
 <p>CMSimple XH 為 CMSimple 的進階版本, 內建的管理者密碼為: admin</p>
 <p>此一台灣繁體版本的特點為:</p>
