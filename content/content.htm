@@ -1,0 +1,226 @@
+<html><head><title>Content</title></head><body>
+<h1>CD2</h1>
+<h2>w15</h2>
+<p>1.sgw 中開啟允許自動帳號建立模式，並關閉匿名登陸</p>
+<p> <img src="./images/1.png" alt="" width="583" height="323"></p>
+<p>2.請建立三名使用者</p>
+<p> </p>
+<p>3.建立模組表單</p>
+<p>(1)計算圓柱體體積 給定 半徑 以及 高 求體積 並存入表單中</p>
+<p>(2)輸入姓名 學號 班級 年齡 試判斷年齡是否超過 20歲 並存入表單中</p>
+<p>(3)輸入兩點之X Y座標 求最短直線距離 並存入表單中</p>
+<p> </p>
+<p>範例</p>
+<p><img src="./images/2.png" alt="" width="593" height="218"></p>
+<p><img src="./images/3.png" alt="" width="592" height="80"></p>
+<h1>C2</h1>
+<h2>w15</h2>
+<p>1.</p>
+<p>請寫一個網頁上的程式, 提供兩個表單, 分別讓使用者填入兩個點的xy座標, </p>
+<p>並計算出兩點最短距離並顯示.</p>
+<p> </p>
+<p>Hint: cherrypy</p>
+<p> </p>
+<p>範例:</p>
+<p> <img src="./images/c2_w15_2.png" alt="" width="269" height="288"></p>
+<p>2.</p>
+<p>承1 程式能夠將資料存入資料庫中,並建立一連結, 並且將使用者所輸入與計算</p>
+<p>的資料用表單(table)在畫面中呈現.</p>
+<p> </p>
+<p>Hint:cherrypy, pybean, html.py, 其實用老師之前做的改一改就很快完成</p>
+<p> </p>
+<p>範例</p>
+<p><img src="./images/c2_w15_3.png" alt="" width="223" height="307"></p>
+<p>3.</p>
+<p>若有一個資料檔案, 其中共有 30 筆學生某次考試的成績格式如下:</p>
+<p>學號 成績</p>
+<p>6501 43<br>6502 49<br>6503 72<br>6504 80<br>6505 68<br>6506 30<br>6507 60<br>6508 72<br>6509 42<br>6510 55<br>6511 75<br>6512 17<br>6513 70<br>6514 21<br>6515 33<br>6516 62<br>6517 39<br>6518 87<br>6519 9<br>6520 16<br>6521 81<br>6522 6<br>6523 54<br>6524 66<br>6525 31<br>6526 94<br>6527 49<br>6528 50<br>6529 100<br>6530 88</p>
+<p> </p>
+<p>請寫一個程式讀進所有學生的成績然後計算全班的平均分數、不及格人數、90分以上人數等, 並且利用 2D 線段, 以 X 軸代表 50, 60, 70, 80, 90 等分數, 而 Y 軸則列出各分數對應的人數.</p>
+<p>(可用曲線圖 或 柱狀圖 表示)</p>
+<p><img src="./images/c2_w15_1.png" alt="" width="483" height="360"></p>
+<p>Hint:pylab or matplot or tkinter (以上均為可繪圖之module)</p>
+<p>pylab</p>
+<p><a href="http://jakevdp.github.io/mpl_tutorial/tutorial_pages/tut1.html">http://jakevdp.github.io/mpl_tutorial/tutorial_pages/tut1.html</a></p>
+<p>matplot</p>
+<p><a href="http://matplotlib.org/examples/index.html">http://matplotlib.org/examples/index.html</a></p>
+<p>tkinter </p>
+<p><a href="http://effbot.org/tkinterbook/canvas.htm">http://effbot.org/tkinterbook/canvas.htm</a></p>
+<h1>歡迎蒞臨 CMSimple_XH 台灣繁體版</h1>
+<p>CMSimple XH 為 CMSimple 的進階版本, 內建的管理者密碼為: admin</p>
+<p>此一台灣繁體版本的特點為:</p>
+<p>1. 配合 Windows 環境下採用 big-5 編碼存檔的需求, 可以正確上傳下載處理中文命名的檔案.</p>
+<p>2. 同時能夠在 Linux 操作系統下正確處理中文命名的檔案.</p>
+<p>3. 假如要修改為其他中文語系的版本, 則必須視操作系統處理中文檔案的方式加以修改.</p>
+<p>4. 此一版次為 CMSimple XH 台灣 1.5.4.1 版</p>
+<p>5. 新增程式標示功能</p>
+<pre class="brush: python; fontsize: 100; first-line: 1; toolbar: false; ">import hashlib
+def md5Checksum(filePath):
+    fh = open(filePath, 'rb')
+    m = hashlib.md5()
+    while True:
+        data = fh.read(8192)
+        if not data:
+            break
+        m.update(data)
+    return m.hexdigest()
+print (md5Checksum("cmsimplexh1541.7z"))</pre>
+<p>程式碼標示使用方法:</p>
+<p>a. 使用者可以在編輯模式, 選擇右上方的"Insert code using Syntaxhighlighter" 功能後, 選擇語言並輸入程式碼後, 按 Insert 完成.</p>
+<p>b. 在頁面區選擇程式碼, 按住滑鼠右鍵帶出 SyntaxHL - edit 表單後, 將所選擇的程式區域放到 Syntaxhighlighter 中進行編輯.</p>
+<p> </p>
+<p> </p>
+<h1>myplugin</h1>
+<p><span>{{{PLUGIN:mypluginMain();}}}</span></p>
+<p>CMSimple XH 延伸程式呼叫方式, 允許以類似函式呼叫的方式放在頁面任何地方, 除了可以與其他頁面內容統一配置外, 即使延伸程式發生語法錯誤, 也不會像舊版的 CMSimple 延伸程式會拖累整個系統, 造成無法連線的致命問題.</p>
+<p>{{{PLUGIN:mypluginMain();}}}</p>
+<p>換言之, CMSimple XH 的延伸程式呼叫方法, 相對較為靈活, 而與 CMSimple 延伸程式的相容性, 雖然並非 100%, 但是通常只要在 URL 呼叫連結的部分稍微修改就可以將舊版的延伸套件放到 CMSimple XH 中使用.</p>
+<h1>Axuploader</h1>
+<p>#CMSimple hide#</p>
+<p>#CMSimple $output.=axuploader_main();#</p>
+<h1>Menu Levels &amp; Headings</h1>
+<p>Headings h1&ndash;h3 are used for splitting up the content file. An h1, h2 or h3 heading will dynamically split the document into new pages in the table of contents. An h4, h5 or h6 heading is used as a heading within a page.</p>
+<div style="text-align: center; font-weight: 900; background: #900; color: #fff; padding: 4px 6px; border: 1px solid #333;">
+<p>Please use only h4&ndash;h6 in the content of your CMSimple pages, <br> because using h1&ndash;h3 will create a new page.</p>
+</div>
+<p>Starting with <strong>CMSimple_XH 1.5</strong> the plugin Pagemanager is included in the download. Pagemanager simplifies creating, renaming, moving and deleting of pages.</p>
+<p>Even complete folders with subfolders can be moved or deleted with Pagemanager.</p>
+<p>Thus it should be no problem to get rid of the contents of this standard download. Alternatively you could start with the present page structure, rename pages and overwrite the contents.</p>
+<h2>Menu Level 2 – Page 1</h2>
+<p>An h2 heading splits into a new page.</p>
+<h4>Heading h4</h4>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h5>Heading h5</h5>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h6>Heading h6</h6>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h3>Menu Level 3 – Page 1</h3>
+<p>An h3 heading splits into a new page.</p>
+<h4>Heading h4</h4>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h5>Heading h5</h5>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h6>Heading h6</h6>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h3>Menu Level 3 – Page 2</h3>
+<p>An h3 heading splits into a new page.</p>
+<h4>Heading h4</h4>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h5>Heading h5</h5>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h6>Heading h6</h6>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h3>Menu Level 3 – Page 3</h3>
+<p>An h3 heading splits into a new page.</p>
+<h4>Heading h4</h4>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h5>Heading h5</h5>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h6>Heading h6</h6>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h2>Menu Level 2 – Page 2</h2>
+<p>An h2 heading splits into a new page.</p>
+<h4>Heading h4</h4>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h5>Heading h5</h5>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h6>Heading h6</h6>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h3>Menu Level 3 – Page 1</h3>
+<p>An h3 heading splits into a new page.</p>
+<h4>Heading h4</h4>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h5>Heading h5</h5>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h6>Heading h6</h6>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h3>Menu Level 3 – Page 2</h3>
+<p>An h3 heading splits into a new page.</p>
+<h4>Heading h4</h4>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h5>Heading h5</h5>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h6>Heading h6</h6>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h3>Menu Level 3 – Page 3</h3>
+<p>An h3 heading splits into a new page.</p>
+<h4>Heading h4</h4>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h5>Heading h5</h5>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h6>Heading h6</h6>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h2>Menu Level 2 – Page 3</h2>
+<p>An h2 heading splits into a new page.</p>
+<h4>Heading h4</h4>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h5>Heading h5</h5>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h6>Heading h6</h6>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h3>Menu Level 3 – Page 1</h3>
+<p>An h3 heading splits into a new page.</p>
+<h4>Heading h4</h4>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h5>Heading h5</h5>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h6>Heading h6</h6>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h3>Menu Level 3 – Page 2</h3>
+<p>An h3 heading splits into a new page.</p>
+<h4>Heading h4</h4>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h5>Heading h5</h5>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h6>Heading h6</h6>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h3>Menu Level 3 – Page 3</h3>
+<p>An h3 heading splits into a new page.</p>
+<h4>Heading h4</h4>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h5>Heading h5</h5>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h6>Heading h6</h6>
+<p>Headings h4–h6 do not split the content into new pages, but serve as normal headings to structure your text semantically.</p>
+<h1>Languages</h1>
+<p>The standard download of CMSimple_XH from version 1.5 onwards comes with English and German language files only.</p>
+<p>Please don’t delete the "default" and "en" language files (default.php and en.php), as they serve as default fallback.</p>
+<p>German language files are included because the German language user’s community is by far the largest and practically all of the developer’s team is German speaking.</p>
+<p>Information and links to language files for other languages can be found <a href="http://www.cmsimple-xh.com/?Downloads:Language_Packs">here »</a></p>
+<h1>Templates &amp; Plugins</h1>
+<p>Through the use of a different <strong>template</strong> you can give your pages a completely different look, and through <strong>plugins</strong> you can greatly enlarge the functionality of your CMSimple_XH website.</p>
+<div style="text-align: center; font-weight: 900; background: #900; color: #fff; padding: 4px 6px; border: 1px solid #333;">
+<p>While installing templates or plugins, <br> please respect the licensing conditions of the authors.</p>
+</div>
+<p>Popular plugins provide picture galleries, guest books, comment possibilities, integration of video etc.</p>
+<p>A list of templates and plugins for CMSimple_XH can be found in the <a href="http://www.cmsimple-xh.com/wiki/doku.php">CMSimple_XH Wiki »</a></p>
+<p>The CMSimple_XH Wiki also has links to preconfigured <a href="http://www.cmsimple-xh.com/wiki/doku.php/cmsimple_xh_packages:start">CMSimple_XH packages »</a> for different purposes, as i.e. managing a weblog.</p>
+<p>How to install templates and plugins into CMSimple_XH is also explained in the CMSimple_XH Wiki under user's manual »</p>
+<h1>News01</h1>
+<h4>Newsbox News01</h4>
+<p>This box shows the content of the hidden page "News01".</p>
+<p>More information about newsboxes can be found here:</p>
+<p style="text-align: right;"><a href="http://www.cmsimple-xh.com/wiki/doku.php/manuals:users_manual:cmsimple:newsboxes">CMSimple_XH Wiki &raquo;</a></p>
+<hr>
+<p>Diese Box zeigt den Inhalt der versteckten Seite "News01".</p>
+<p>Mehr Informationen zum Thema Newsboxen gibt es hier:</p>
+<p style="text-align: right;"><a href="http://www.cmsimple-xh.de/dokuwiki/doku.php/anwenderdokumentation:cmsimple:newsboxen">CMSimple_XH Wiki &raquo;</a></p>
+<h1>News02</h1>
+<h4>Newsbox News02</h4>
+<p>This box shows the content of the hidden page "News02".</p>
+<p>More information about newsboxes can be found here:</p>
+<p style="text-align: right;"><a href="http://www.cmsimple-xh.com/wiki/doku.php/manuals:users_manual:cmsimple:newsboxes">CMSimple_XH Wiki &raquo;</a></p>
+<hr>
+<p>Diese Box zeigt den Inhalt der versteckten Seite "News02".</p>
+<p>Mehr Informationen zum Thema Newsboxen gibt es hier:</p>
+<p style="text-align: right;"><a href="http://www.cmsimple-xh.de/dokuwiki/doku.php/anwenderdokumentation:cmsimple:newsboxen">CMSimple_XH Wiki &raquo;</a></p>
+<h1>News03</h1>
+<h4>Newsbox News03</h4>
+<p>This box shows the content of the hidden page "News03".</p>
+<p>More information about newsboxes can be found here:</p>
+<p style="text-align: right;"><a href="http://www.cmsimple-xh.com/wiki/doku.php/manuals:users_manual:cmsimple:newsboxes">CMSimple_XH Wiki »</a></p>
+<hr>
+<p>Diese Box zeigt den Inhalt der versteckten Seite "News03".</p>
+<p>Mehr Informationen zum Thema Newsboxen gibt es hier:</p>
+<p style="text-align: right;"><a href="http://www.cmsimple-xh.de/dokuwiki/doku.php/anwenderdokumentation:cmsimple:newsboxen">CMSimple_XH Wiki »</a></p>
+</body></html>
